@@ -23,8 +23,9 @@ from fastapi import Request, Response
 from rich.console import Console
 from starlette.concurrency import iterate_in_threadpool
 
-from core.config import settings
-
+# from core.config import settings
+# TODO: create a config file
+debug = True
 
 class CustomLog(object):
     def __init__(
@@ -102,7 +103,8 @@ class CustomLog(object):
 
 
 async def log_middleware(request: Request, call_next: Callable) -> Response:
-    if settings.debug == "false":
+    # if settings.debug == "false":
+    if debug == "false":
         response = await call_next(request)
         return response
     try:

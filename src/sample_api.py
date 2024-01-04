@@ -32,10 +32,12 @@ app = FastAPI(
     openapi_url=f"/example.json",
     )
 
+from starlette.middleware.base import BaseHTTPMiddleware
 app.add_middleware(
     BaseHTTPMiddleware,
     dispatch=log_middleware
 )
+
 
 @app.get("/")
 def read_root():
