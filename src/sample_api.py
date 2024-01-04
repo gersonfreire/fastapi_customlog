@@ -50,11 +50,3 @@ if __name__ == "__main__":
         host='0.0.0.0', 
         port=8888,
         )     
-
-"""
-Fnatástico, guicarvalho! Vou usar agora mesmo!
-Parabéns! Vou inclusive adicionar algumas funcionalidades, como gravar log em arquivo e enviar para Telegram e já criei um repo público no GH:
-https://github.com/gersonfreire/fastapi_customlog.git
-Se quiser fazer contato, meu email e telefone são gerson.freire@gmail.com (27) 99608-0356
-Vamos colaborar lá no repo público pra comunidade de devs!
-"""
