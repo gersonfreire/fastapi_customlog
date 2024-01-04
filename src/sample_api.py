@@ -5,14 +5,13 @@ import argparse
 from typing import Union
 
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.base import BaseHTTPMiddleware
 
 import uvicorn
 
 import sys, os
 
-  
-from fastapi.middleware import BaseHTTPMiddleware
+from starlette.middleware.base import BaseHTTPMiddleware
 
 from customlog import log_middleware
 
@@ -37,7 +36,6 @@ app.add_middleware(
     BaseHTTPMiddleware,
     dispatch=log_middleware
 )
-
 
 @app.get("/")
 def read_root():
